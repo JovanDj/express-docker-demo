@@ -1,17 +1,21 @@
 services:
-  #   web:
-  #     build:
-  #       context: ./
-  #       target: dev
-  #     volumes:
-  #       - .:/src
-  #     command: npm run start:dev
-  #     ports:
-  #       - "3000:3000"
   db:
+    container_name: "db"
     image: postgres
     restart: always
     ports:
       - 5432:5432
     env_file:
       - .env
+  # web:
+  #   container_name: "app"
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - db
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "${PORT}:${PORT}"
+  #   env_file:
+  #     - .env
