@@ -1,0 +1,19 @@
+{
+  "name": "express-docker-demo",
+  "version": "0.0.0",
+  "description": "Express docker demo app",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "author": "Digital Infinity",
+  "license": "UNLICENCED",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
