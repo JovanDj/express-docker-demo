@@ -21,6 +21,7 @@
     "knex": "^0.95.6",
     "morgan": "^1.10.0",
     "objection": "^2.2.15",
+    "objection-password": "^3.0.0",
     "pg": "^8.6.0"
   },
   "devDependencies": {
