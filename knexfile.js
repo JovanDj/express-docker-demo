@@ -19,6 +19,6 @@ module.exports = {
       directory: "./db/seeds",
     },
 
-    ...knexSnakeCaseMappers,
+    ...knexSnakeCaseMappers(),
   },
 };

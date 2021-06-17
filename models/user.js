@@ -6,7 +6,7 @@ class User extends Model {
   }
 
   static get idColumn() {
-    return "user_id";
+    return "userId";
   }
 }
 
