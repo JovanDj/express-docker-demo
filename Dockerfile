@@ -16,6 +16,7 @@ RUN npm ci
 COPY . .
 
 EXPOSE 3000
-RUN npm run db:setup
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.9.0/wait /wait
+RUN chmod +x /wait
 
-CMD [ "node", "app.js" ]
+CMD /wait && npm run db:setup && npm run dev
